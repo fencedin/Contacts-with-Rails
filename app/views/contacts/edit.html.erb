@@ -1,13 +1,4 @@
-<h1>Contacts</h1>
-
-<ul>
-  <% @contacts.each do |contact| %>
-    <li><a href="/contacts/<%= contact.id %>"><%= contact.name %></a></li>
-  <% end %>
-</ul>
-
-
-<h2>New Contact</h2>
+<h1>Edit Contact</h1>
 
 <% if @contact.errors.any? %>
 <h3>Please fix these errors:</h3>
@@ -19,14 +10,13 @@
 <% end %>
 
 
-<form action="/contacts" method="post">
+<form action="/contacts/<%= @contact.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
   <label for="contact_name">Name</label>
   <input id="contact_name" name="name" type="text" value="<%= @contact.name %>"><br>
   <label for="contact_phone">Phone</label>
   <input id="contact_phone" name="phone" type="text" value="<%= @contact.phone %>"><br>
   <label for="contact_email">Email</label>
   <input id="contact_email" name="email" type="text" value="<%= @contact.email %>"><br>
-  <button>Create contact</button>
+  <button>Update contact</button>
 </form>
-
-

@@ -1,13 +1,4 @@
-<h1>Contacts</h1>
-
-<ul>
-  <% @contacts.each do |contact| %>
-    <li><a href="/contacts/<%= contact.id %>"><%= contact.name %></a></li>
-  <% end %>
-</ul>
-
-
-<h2>New Contact</h2>
+<h1>New Contact</h1>
 
 <% if @contact.errors.any? %>
 <h3>Please fix these errors:</h3>
@@ -28,5 +19,3 @@
   <input id="contact_email" name="email" type="text" value="<%= @contact.email %>"><br>
   <button>Create contact</button>
 </form>
-
-
