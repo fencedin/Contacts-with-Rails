@@ -1,6 +1,6 @@
-#Contacts with Rails
+= Contacts with Rails
 
-##Create web application to add contacts to a list
+== Create web application to add contacts to a list
 
-It should add a new contact with a name, phone, and email.
-It shoudl be able to edit and delete contacts.
+* It should add a new contact with a name, phone, and email.
+* It should be able to edit and delete contacts.
